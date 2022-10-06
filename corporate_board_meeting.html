@@ -11441,8 +11441,6 @@
             <hr/> 
             <form method = "POST" > 
 
-            {% csrf_token %}
-
             
               <input name="Name" type="text" class="feedback-input" placeholder="Name" name = "Name" required ><br/>
               <input name="Email" type="text" class="feedback-input" placeholder="Email" name = "Email" required > <br/>
@@ -11451,23 +11449,17 @@
               <input type = "text" class = "feedback-input"placeholder = "Enter Services "  name = "Services" required><br/> 
               <input type = "text" class = "feedback-input"  placeholder = "Enter Description "  name = "Description" required><br/> 
 
-              {% comment %} <select name="services" class="feedback-select">
+              <select name="services" class="feedback-select">
                 <option value="corporate">Corporate</option>
                 <option value="educational">Educational</option>
                 <option value="social">Social</option>
                 <option value="special_events">Special Events</option>
               </select>
-              <textarea name="text" class="feedback-input" placeholder="Description" name = "Description"></textarea> {% endcomment %}
-              {% comment %} <input type="submit" value="SUBMIT" /> {% endcomment %}
+              <textarea name="text" class="feedback-input" placeholder="Description" name = "Description"></textarea>  <input type="submit" value="SUBMIT" />
               <div>
                 <button class="btn btn-primary btn-block py-3" type="submit">Submit  Now</button>
               </div>
             
-            {% if  messages %} 
-            {% for message in messages %}
-
-            {% endfor%}
-            {% endif %}
             </form> 
             <hr/>  
 
